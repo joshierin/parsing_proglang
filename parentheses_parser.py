@@ -5,9 +5,11 @@ def parse_opening(tokens):
         token = tokens[j]
         if token.find("(") != -1:
             mini_tokens = token.split("(")
-            retokens.append(mini_tokens[0])
+            if mini_tokens[0] != "":
+                retokens.append(mini_tokens[0])
             retokens.append("(")
-            retokens.append(mini_tokens[1])
+            if mini_tokens[1] != "":
+                retokens.append(mini_tokens[1])
         else:
             retokens.append(token)
         j += 1
@@ -20,7 +22,8 @@ def parse_closing(tokens):
         token = tokens[h]
         if token.find(")") != -1:
             mini_tokens = token.split(")")
-            retokens.append(mini_tokens[0])
+            if mini_tokens[0] != "":
+                retokens.append(mini_tokens[0])
             retokens.append(")")
             if mini_tokens[1] != "":
                 retokens.append(mini_tokens[1])

@@ -36,6 +36,10 @@ while i < len(tokens):
     elif token == "}":
         indent_count -= 1
         print("\n" + indent(indent_count) + token)
+    elif token == "if":
+        print("\n" + indent(indent_count) + token, end = " ")
+    elif token == "else":
+        print("\n" + indent(indent_count) + token, end = " ")
     else:
         print(token, end = " ")
     
