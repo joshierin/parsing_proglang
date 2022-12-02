@@ -14,11 +14,11 @@ tokens = source_code.split() # split user input separated by white spaces
 print("tokens after split:")
 print(tokens, "\n")
 
-tokens = parentheses_parser.parse_opening(tokens) # parse string with open parentheses
+tokens = parentheses_parser.parse(tokens, "(") # parse string with open parentheses
 print("tokens after parsing opening parentheses:")
 print(tokens, "\n")
 
-tokens = parentheses_parser.parse_closing(tokens) # parse string with close parentheses
+tokens = parentheses_parser.parse(tokens, ")") # parse string with close parentheses
 print("tokens after parsing closing parentheses:")
 print(tokens, "\n")
 
